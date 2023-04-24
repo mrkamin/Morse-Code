@@ -18,16 +18,17 @@ end
 
 def decode_word(word)
   word_arr = word.split
-  compound = ''
+  compound =  ''
 
   word_arr.each do |char|
     compound += decode_char(char)
   end
+
   compound
 end
 
 def decode_message(message)
-  string_arr = message.split
+  string_arr = message.split('  ')
   message = ''
 
   string_arr.each do |word|
